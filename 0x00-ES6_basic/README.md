@@ -1,1 +1,1 @@
-ES6_BASIC
+ES6_BASIC javascript
