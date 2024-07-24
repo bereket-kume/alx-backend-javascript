@@ -1,3 +1,3 @@
-import handleProfileSignup from './3-all.js';
+import signUpUser from './4-user-promise.js';
 
-handleProfileSignup();
+console.log(signUpUser('Bob', 'Dylan'));
