@@ -1,4 +1,3 @@
 export default function iterateThroughObject(reportWithIterator) {
-    console.log(reportWithIterator)
-
+  console.log(reportWithIterator);
 }
