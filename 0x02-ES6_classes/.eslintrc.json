@@ -1,20 +1,41 @@
 {
   "env": {
-    "browser": true,
-    "es2021": true
+    "browser": false,
+    "es6": true,
+    "jest": true
   },
   "extends": [
-    "eslint:recommended",
-    "airbnb-base"
+    "airbnb-base",
+    "plugin:jest/all"
   ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
   "parserOptions": {
-    "ecmaVersion": 12,
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "plugins": ["jest"],
   "rules": {
-    "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"]
-  }
+    "max-classes-per-file": "off",
+    "no-underscore-dangle": "off",
+    "no-console": "off",
+    "no-shadow": "off",
+    "no-restricted-syntax": [
+      "error",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "quotes": ["error", "single"], // Enforce single quotes
+    "eol-last": ["error", "always"], // Ensure newline at end of file
+    "semi": ["error", "always"], // Enforce semicolons
+    "jest/require-hook": "off" // Disable rule if not applicable
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "excludedFiles": "babel.config.js"
+    }
+  ]
 }
