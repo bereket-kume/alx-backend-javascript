@@ -16,7 +16,7 @@ function countStudents(path) {
           if (field) {
             if (!studentGroups[field]) studentGroups[field] = [];
             studentGroups[field].push(firstName);
-            totalStudents++;
+            totalStudents += 1;
           }
         });
 
@@ -27,7 +27,7 @@ function countStudents(path) {
 
         resolve();
       })
-      .catch((err) => {
+      .catch(() => {
         reject(new Error('Cannot load the database'));
       });
   });
