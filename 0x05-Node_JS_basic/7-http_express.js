@@ -4,7 +4,7 @@ const countStudents = require('./read_file');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello Holberton School! ');
+  res.send('Hello Holberton School!');
 });
 
 app.get('/students', (req, res) => {
@@ -27,4 +27,4 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
-module.exports = app
+module.exports = app;
