@@ -14,11 +14,11 @@ app.get('/students', (req, res) => {
   countStudents(dbfile)
     .then((data) => {
       responseText += data;
-      res.end(responseText);
+      res.send(responseText);
     })
     .catch((error) => {
       responseText += error.message;
-      res.end(responseText);
+      res.send(responseText);
     });
 });
 
