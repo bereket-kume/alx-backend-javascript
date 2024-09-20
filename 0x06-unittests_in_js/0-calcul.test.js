@@ -30,4 +30,8 @@ describe('calculateNumber', function() {
     it('should return -2 when oth inputs are -1.4 and -0.7', () => {
         assert.strictEqual(calculateNumber(-1.4, -0.7), -2);
     });
+    
+    it('rounding down a and b floating point fractional numbers with trailing 9\'s', () => {
+        assert.strictEqual(calculateNumber(2.499999, 3.499999), 5);
+      });
 })
