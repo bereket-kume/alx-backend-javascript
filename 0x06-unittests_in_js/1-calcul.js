@@ -8,6 +8,7 @@ function calculateNumber(type, a, b) {
             break
         case 'SUBTRACT':
             result = x - y
+            break
         case 'DIVIDE':
             if (y == 0) {
                 result = 'Error';
