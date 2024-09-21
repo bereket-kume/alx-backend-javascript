@@ -22,8 +22,8 @@ app.get('/available_payments', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    username = req.body.username
-    res.send(`Welcome ${username}`)
+    const { userName } = req.body
+    res.send(`Welcome ${userName}`)
 })
 
 const PORT = 7865;
