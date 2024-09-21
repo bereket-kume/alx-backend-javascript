@@ -1,7 +1,5 @@
 const sinon = require('sinon');
-const Utils = require('./utils');
-const sendPaymentRequestToApi = require('./3-payment');
-const assert = require('assert');
+const sendPaymentRequestToApi = require('./5-payment');
 const { expect } = require('chai');
 
 describe('sendPaymentRequestToApi', () => {
@@ -13,11 +11,11 @@ describe('sendPaymentRequestToApi', () => {
   });
 
   it('should log correct value', () => {
-    sendPaymentRequestToApi('SUM', 100, 20);
+    sendPaymentRequestToApi(100, 20);
     expect(console.log.withArgs("The total is: 120").calledOnce).to.be.true;
   })
   it('should log correct', () => {
-    sendPaymentRequestToApi('SUM', 10, 10)
-    expect(console.log.withArgs("The total is: 20").calledOnce).to.true;
+    sendPaymentRequestToApi(10, 10)
+    expect(console.log.withArgs("The total is: 20").calledOnce).to.be.true;
   })
 });
