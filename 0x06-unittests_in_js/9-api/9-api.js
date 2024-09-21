@@ -6,14 +6,11 @@ app.get('/', (req, res) => {
     res.send("Welcome to the payment system");
 })
 
-app.get('/cart/:id(\\d+)', (req, res) => {
+app.get('/cart/:id([0-9]+)', (req, res) => {
     const id = req.params.id
     res.send(`Payment methods for cart ${id}`);
 });
 
-app.get('/cart/:d', (req, res) => {
-    res.status(404).send("Not Found");
-});
 
 const PORT = 7865;
 app.listen(PORT, () => {
